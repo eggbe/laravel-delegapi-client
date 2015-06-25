@@ -19,8 +19,8 @@ class LaravelDelegapiClientServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		$this->package('eggbe/delegapi-client');
-		LaravelDelegapiClient::$Config = Config::get('delegapi-client::config');
+		$this->package('eggbe/laravel-delegapi-client');
+		LaravelDelegapiClient::$Config = Config::get('laravel-delegapi-client::config');
 	}
 
 }

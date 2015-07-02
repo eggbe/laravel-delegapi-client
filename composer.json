@@ -12,9 +12,10 @@
 		}
 	],
 	"require": {
-		"php": ">=5.3.0",
+		"php": ">=5.5.0",
 		"illuminate/support": "~4.0",
-		"eggbe/helpers": "dev-master"
+		"eggbe/helpers": "dev-master",
+		"eggbe/delegapi-client": "dev-master"
 	},
 	"autoload": {
 		"psr-0": {

@@ -3,25 +3,14 @@ namespace Eggbe\LaravelDelegapiClient;
 
 use \Eggbe\DelegapiClient\Client;
 
-class LaravelDelegapiClient {
+class LaravelDelegapiClient extends Client {
 
 	/**
-	 * @var Client
+	 * @param array $Config
+	 * @throws \Exception
 	 */
-	private static $Client = null;
-
-	/**
-	 * @param string $name
-	 * @param array $Args
-	 * @return Client
-	 */
-	public static function __callStatic($name, array $Args = []){
-		if (is_null(self::$Client)){
-			self::$Client = new Client(self::$Config);
-		}
-
-		self::$Client->{$name}();
-		return self::$Client;
+	public function __construct(array $Config) {
+		parent::__construct($Config);
 	}
 
 }

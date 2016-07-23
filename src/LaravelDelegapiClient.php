@@ -6,11 +6,6 @@ use \Eggbe\DelegapiClient\Client;
 class LaravelDelegapiClient {
 
 	/**
-	 * @var array
-	 */
-	public static $Config = [];
-
-	/**
 	 * @var Client
 	 */
 	private static $Client = null;

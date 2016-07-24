@@ -1,5 +1,5 @@
 <?php
-namespace Eggbe\LaravelHashStore;
+namespace Eggbe\LaravelDelegapiClient;
 
 use \Illuminate\Support\Facades\Facade;
 

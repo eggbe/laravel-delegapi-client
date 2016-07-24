@@ -33,4 +33,5 @@ class LaravelDelegapiClientServiceProvider extends ServiceProvider {
 			dirname(__DIR__) . '/config/delegapi-client.php' => config_path('delegapi-client.php'),
 		]);
 	}
+
 }

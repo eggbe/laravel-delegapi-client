@@ -16,12 +16,11 @@ class LaravelDelegapiClientServiceProvider extends ServiceProvider {
 
 	/**
 	 * Register bindings in the container.
-	 * @return void
 	 */
 	public function register() {
-		$this->mergeConfigFrom(dirname(__DIR__) . '/config/delegapi-client.php', 'delegapi-client');
+		$this->mergeConfigFrom(dirname(__DIR__) . '/config/delegapi-client.php', 'eggbe.delegapi-client');
 		$this->app->singleton('DelegapiClient', function () {
-			return new Client(Config::get('delegapi-client'));
+			return new Client(Config::get('eggbe.delegapi-client'));
 		});
 	}
 
@@ -30,7 +29,7 @@ class LaravelDelegapiClientServiceProvider extends ServiceProvider {
 	 */
 	public final function boot() {
 		$this->publishes([
-			dirname(__DIR__) . '/config/delegapi-client.php' => config_path('delegapi-client.php'),
+			dirname(__DIR__) . '/config/delegapi-client.php' => config_path('eggbe/delegapi-client.php'),
 		]);
 	}
 

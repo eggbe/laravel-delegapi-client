@@ -1,4 +1,5 @@
 <?php
+use \Eggbe\DelegapiClient\Watcher\Time;
 use \Eggbe\DelegapiClient\Watcher\Referer;
 
 return [
@@ -6,8 +7,13 @@ return [
 	'url' => null,
 	'hash'=> null,
 
+	'wrapper' => function($source){
+		return json_decode($source, true);
+	},
+
 	'watch' => [
-		'referer' => Referer::class,
+		Referer::class,
+		Time::class,
 	],
 
 ];

@@ -4,7 +4,7 @@ namespace Eggbe\LaravelDelegapiClient;
 use \Illuminate\Support\ServiceProvider;
 use \Illuminate\Support\Facades\Config;
 
-use \Eggbe\DelegapiClient\Client;
+use \Eggbe\LaravelDelegapiClient\LaravelDelegapiClient;
 
 class LaravelDelegapiClientServiceProvider extends ServiceProvider {
 
@@ -20,7 +20,7 @@ class LaravelDelegapiClientServiceProvider extends ServiceProvider {
 	public function register() {
 		$this->mergeConfigFrom(dirname(__DIR__) . '/config/delegapi-client.php', 'eggbe.delegapi-client');
 		$this->app->singleton('DelegapiClient', function () {
-			return new Client(Config::get('eggbe.delegapi-client'));
+			return new LaravelDelegapiClient(Config::get('eggbe.delegapi-client'));
 		});
 	}
 

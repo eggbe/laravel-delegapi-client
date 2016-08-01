@@ -19,7 +19,7 @@ class LaravelDelegapiClientServiceProvider extends ServiceProvider {
 	 */
 	public function register() {
 		$this->mergeConfigFrom(dirname(__DIR__) . '/config/delegapi-client.php', 'eggbe.delegapi-client');
-		$this->app->singleton('DelegapiClient', function () {
+		$this->app->bind('DelegapiClient', function () {
 			return new LaravelDelegapiClient(Config::get('eggbe.delegapi-client'));
 		});
 	}

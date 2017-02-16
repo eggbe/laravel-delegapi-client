@@ -15,7 +15,7 @@ return [
 	],
 
 	'wrapper' => function($source){
-		return json_decode($source, true);
+		return $source;
 	},
 
 	'watch' => [

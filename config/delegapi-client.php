@@ -1,18 +1,24 @@
 <?php
+use \Eggbe\Helper\Arr;
+
+use \Eggbe\DelegapiClient\Parser\Json;
 use \Eggbe\DelegapiClient\Watcher\Time;
-use \Eggbe\DelegapiClient\Watcher\Referer;
 
 return [
 
 	'url' => null,
-	'token'=> null,
+
+	'parser' => Json::class,
+
+	'arguments' => [
+		'referer' => Arr::get($_SERVER, 'HTTP_HOST', null),
+	],
 
 	'wrapper' => function($source){
 		return json_decode($source, true);
 	},
 
 	'watch' => [
-		Referer::class,
 		Time::class,
 	],
 

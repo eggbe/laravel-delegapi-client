@@ -15,7 +15,7 @@
 	"require": {
 		"php": ">=7.0.0",
 		"illuminate/support": "~5.0",
-		"eggbe/helpers": "dev-master",
+		"able/helpers": "dev-master",
 		"eggbe/delegapi-client": "dev-master"
 	},
 	"autoload": {

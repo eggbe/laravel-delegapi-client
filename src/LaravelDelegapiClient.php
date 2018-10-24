@@ -1,7 +1,7 @@
 <?php
 namespace Eggbe\LaravelDelegapiClient;
 
-use \Eggbe\Helper\Arr;
+use \Able\Helpers\Arr;
 
 use \Eggbe\DelegapiClient\Client;
 use \Eggbe\DelegapiClient\Parser\Abstracts\AParser;

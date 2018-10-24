@@ -1,5 +1,5 @@
 <?php
-use \Eggbe\Helper\Arr;
+use \Able\Helpers\Arr;
 
 use \Eggbe\DelegapiClient\Parser\Json;
 use \Eggbe\DelegapiClient\Watcher\Time;
